@@ -22,21 +22,17 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.spongepowered.api.event.block;
 
-import org.spongepowered.api.block.BlockLoc;
-import org.spongepowered.api.event.GameEvent;
+package org.spongepowered.api.event.cause;
+
+import org.spongepowered.api.event.entity.EntityTeleportEvent;
 
 /**
- * Base event for events affecting a single block.
+ * Represents the cause of an {@link EntityTeleportEvent}.
  */
-public interface BlockEvent extends GameEvent {
+public interface TeleportCause extends Cause
+{
 
-    /**
-     * Get the block affected by the event (the target block).
-     *
-     * @return Related block
-     */
-    BlockLoc getBlock();
+    //TODO anything to include here?
 
 }

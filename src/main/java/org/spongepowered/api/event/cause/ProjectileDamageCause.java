@@ -23,4 +23,31 @@
  * THE SOFTWARE.
  */
 
-@org.spongepowered.api.util.annotation.NonnullByDefault package org.spongepowered.api.event.cause.reason;
+package org.spongepowered.api.event.cause;
+
+import org.spongepowered.api.entity.projectile.Projectile;
+import org.spongepowered.api.entity.projectile.source.ProjectileSource;
+
+import com.google.common.base.Optional;
+
+/**
+ * A {@link DamageCause} which was caused by a projectile.
+ */
+public interface ProjectileDamageCause extends DamageCause
+{
+    
+    /**
+     * Gets the {@link ProjectileSource} which cast the projectile, if available.
+     * 
+     * @return The projectile source
+     */
+    Optional<ProjectileSource> getProjectileSource();
+
+    /**
+     * Gets the source {@link Projectile} for this damage cause.
+     * 
+     * @return The projectile
+     */
+    Projectile getProjectile();
+    
+}

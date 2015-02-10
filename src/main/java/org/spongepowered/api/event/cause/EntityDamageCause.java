@@ -22,21 +22,22 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.spongepowered.api.event.block;
 
-import org.spongepowered.api.block.BlockLoc;
-import org.spongepowered.api.event.GameEvent;
+package org.spongepowered.api.event.cause;
+
+import org.spongepowered.api.entity.Entity;
 
 /**
- * Base event for events affecting a single block.
+ * A {@link DamageCause} which was caused directly by an entity.
  */
-public interface BlockEvent extends GameEvent {
+public interface EntityDamageCause extends DamageCause
+{
 
     /**
-     * Get the block affected by the event (the target block).
-     *
-     * @return Related block
+     * Gets the source {@link Entity} for this damage cause.
+     * 
+     * @return The source entity
      */
-    BlockLoc getBlock();
+    Entity getSourceEntity();
 
 }

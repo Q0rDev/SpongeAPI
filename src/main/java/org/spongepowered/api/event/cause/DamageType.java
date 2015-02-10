@@ -1,8 +1,7 @@
 /*
- * This file is part of Sponge, licensed under the MIT License (MIT).
+ * The MIT License (MIT)
  *
- * Copyright (c) SpongePowered.org <http://www.spongepowered.org>
- * Copyright (c) contributors
+ * Copyright (c) 2014 The Voxel Plugineering Team
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,21 +21,12 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.spongepowered.api.event.block;
-
-import org.spongepowered.api.block.BlockLoc;
-import org.spongepowered.api.event.GameEvent;
+package org.spongepowered.api.event.cause;
 
 /**
- * Base event for events affecting a single block.
+ * Represents a type of damage.
  */
-public interface BlockEvent extends GameEvent {
-
-    /**
-     * Get the block affected by the event (the target block).
-     *
-     * @return Related block
-     */
-    BlockLoc getBlock();
+public interface DamageType
+{
 
 }

@@ -23,14 +23,21 @@
  * THE SOFTWARE.
  */
 
-package org.spongepowered.api.event.cause.reason;
-
-import org.spongepowered.api.event.cause.Cause;
+package org.spongepowered.api.event.cause;
 
 /**
- * A reason explains a {@link Cause}. For example, a cause might be a fire
- * block, and the reason would be fire spread.
+ * An enumeration of standard {@link TeleportCause}s.
  */
-public interface Reason {
+public final class TeleportCauses {
+
+    public static final TeleportCause COMMAND = null;
+    public static final TeleportCause PLUGIN = null;
+    public static final TeleportCause NETHER_PORTAL = null;
+    public static final TeleportCause END_PORTAL = null;
+    public static final TeleportCause ENDER_PEARL = null;
+    public static final TeleportCause UNKNOWN = null;
+
+    private TeleportCauses() {
+    }
 
 }

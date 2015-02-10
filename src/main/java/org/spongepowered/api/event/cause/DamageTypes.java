@@ -1,8 +1,7 @@
 /*
- * This file is part of Sponge, licensed under the MIT License (MIT).
+ * The MIT License (MIT)
  *
- * Copyright (c) SpongePowered.org <http://www.spongepowered.org>
- * Copyright (c) contributors
+ * Copyright (c) 2014 The Voxel Plugineering Team
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,24 +21,19 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
 package org.spongepowered.api.event.cause;
 
-import com.google.common.base.Optional;
-
 /**
- * Something that keeps track of the cause.
+ * An enumeration of standard {@link DamageType}s.
  */
-public interface CauseTracked {
+public final class DamageTypes
+{
 
-    /**
-     * Get the last cause.
-     *
-     * <p>Parent causes, including possibly the root cause, can be
-     * retrieved using {@link Cause#getParent()}.</p>
-     *
-     * @return The last cause
-     */
-    Optional<Cause> getCause();
-
+    public static final DamageType FIRE = null;
+    public static final DamageType MAGIC = null;
+    public static final DamageType EXPLOSIVE = null;
+    public static final DamageType PROJECTILE = null;
+    
+    private DamageTypes() {}
+    
 }
